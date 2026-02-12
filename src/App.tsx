@@ -29,6 +29,8 @@ export default function App() {
       {/* Barra superior */}
       <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-quai-navy/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+          
+          {/* Logo + nombre */}
           <div className="flex items-center gap-3">
             <img
               src="/quai_analytics_logo.png"
@@ -36,14 +38,14 @@ export default function App() {
               className="h-9 w-auto"
             />
             <div>
-              <p className="text-sm font-semibold tracking-wide">
-                QuAI Analytics
-              </p>
+              <p className="text-sm font-semibold">QuAI Analytics</p>
               <p className="text-[11px] text-slate-400">
                 Propuesta Digital – El Alandalus
               </p>
             </div>
           </div>
+
+          {/* Navegación */}
           <nav className="hidden gap-5 text-xs md:flex">
             {navItems.map((item) => (
               <button
@@ -55,8 +57,10 @@ export default function App() {
               </button>
             ))}
           </nav>
+
         </div>
       </header>
+
 
       {/* Hero / Portada */}
       <Section
@@ -65,19 +69,15 @@ export default function App() {
         title="De la entrada manual de datos a decisiones con datos en tiempo real."
         description="Propuesta digital preparada por QuAI Analytics para El Alandalus, enfocada en conectar su operación diaria con analítica en la nube, dashboards de negocio y automatización con IA."
         dark
+
       >
         <div className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-center">
           <div className="space-y-5 text-sm md:text-base text-slate-200">
             <p>
-              Hoy, gran parte de la información crítica de El Alandalus vive en
-              reportes manuales, digitación en ERP y archivos locales. Eso
-              consume horas de trabajo y retrasa la toma de decisiones.
+              Hoy, gran parte de la información crítica de El Alandalus vive en reportes manuales, digitación en ERP y archivos locales. Eso consume horas de trabajo y retrasa la toma de decisiones.
             </p>
             <p>
-              Nuestra propuesta conecta directamente su ERP con la nube mediante
-              una VPN segura, estructura los datos y despliega dashboards que se
-              actualizan solos, con la opción de automatizar la carga de
-              facturas a través de OCR e IA.
+              Nuestra propuesta conecta directamente su ERP con la nube mediante una VPN segura, estructura los datos y despliega dashboards que se actualizan solos, con la opción de automatizar la carga de facturas a través de OCR e IA.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <button
@@ -112,7 +112,7 @@ export default function App() {
       >
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-red-900/60 bg-gradient-to-br from-red-950 via-slate-950 to-slate-950 p-6">
-            <h3 className="text-lg font-semibold mb-3">🛑 La situación actual</h3>
+            <h3 className="text-lg font-bold mb-3">La situación actual</h3>
             <ul className="space-y-2 text-sm text-slate-200">
               <li>
                 • <strong>Ceguera operativa:</strong> reportes dependen de
@@ -129,7 +129,7 @@ export default function App() {
             </ul>
           </div>
           <div className="rounded-2xl border border-emerald-900/60 bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-950 p-6">
-            <h3 className="text-lg font-semibold mb-3">✅ Nuestra solución</h3>
+            <h3 className="text-lg font-bold mb-3"> Nuestra solución</h3>
             <ul className="space-y-2 text-sm text-slate-200">
               <li>
                 • <strong>Conexión segura (VPN):</strong> acceso directo al ERP
@@ -262,7 +262,7 @@ export default function App() {
               infraestructura en la nube.
             </p>
           </div>
-        </div>
+          </div>
       </Section>
 
       {/* ROI e inversión */}
@@ -270,18 +270,15 @@ export default function App() {
         id="roi"
         eyebrow="4 · Inversión y retorno"
         title="Calculadora de ahorro e inversión para El Alandalus."
+
       >
         <div className="grid gap-10 md:grid-cols-[2fr,3fr] md:items-start">
           <div className="space-y-4 text-sm text-slate-200">
             <p>
-              La solución está diseñada para liberar tiempo del equipo y reducir
-              errores manuales. La calculadora permite estimar el impacto
-              económico anual de automatizar la digitación y los reportes.
+              La solución está diseñada para liberar tiempo del equipo y reducir errores manuales. La calculadora permite estimar el impacto económico anual de automatizar la digitación y los reportes.
             </p>
             <p>
-              Ajusta las horas diarias ahorradas, el coste por hora y el número
-              de personas involucradas para ver cómo se comporta el ahorro
-              estimado.
+              Ajusta las horas diarias ahorradas, el coste por hora y el número de personas involucradas para ver cómo se comporta el ahorro estimado.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-6 text-sm">
@@ -342,130 +339,106 @@ export default function App() {
               </div>
               <div className="mt-2 space-y-1 text-slate-200">
                 <p>
-                  • Ahorro semanal estimado:{" "}
-                  <span className="font-semibold">
-                    $
-                    {ahorroSemanal.toLocaleString(undefined, {
-                      maximumFractionDigits: 0
-                    })}
-                  </span>
+                  • Ahorro semanal estimado: <span className="font-semibold">${ahorroSemanal.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                 </p>
                 <p>
-                  • Ahorro mensual (4.33 semanas):{" "}
-                  <span className="font-semibold">
-                    $
-                    {ahorroMensual.toLocaleString(undefined, {
-                      maximumFractionDigits: 0
-                    })}
-                  </span>
+                  • Ahorro mensual (4.33 semanas): <span className="font-semibold">${ahorroMensual.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                 </p>
                 <p>
-                  • Ahorro anual estimado:{" "}
-                  <span className="font-semibold text-quai-teal">
-                    $
-                    {ahorroAnual.toLocaleString(undefined, {
-                      maximumFractionDigits: 0
-                    })}
-                  </span>
+                  • Ahorro anual estimado: <span className="font-semibold text-quai-teal">${ahorroAnual.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                 </p>
               </div>
               <p className="mt-2 text-[11px] text-slate-400">
-                Este cálculo está inspirado en la lógica de tu app de
-                Streamlit. En la reunión ajustaremos los valores a la realidad
-                de El Alandalus para construir el caso de negocio final.
+                Este cálculo está inspirado en la lógica de tu app de Streamlit. En la reunión ajustaremos los valores a la realidad de El Alandalus para construir el caso de negocio final.
               </p>
             </div>
           </div>
         </div>
-
         {/* Paquetes de inversión */}
         <div className="mt-14">
           <h3 className="text-lg font-semibold mb-4">Inversión y alcance</h3>
           <p className="text-sm text-slate-200 mb-6">
-            Para El Alandalus, hemos diseñado dos rutas principales de
-            implementación y un plan de mantenimiento. Recomendamos el{" "}
-            <span className="font-semibold">Plan B: Automatización Completa</span>{" "}
-            para maximizar el ahorro de horas hombre.
+            Para El Alandalus, hemos diseñado dos rutas principales de implementación. Recomendamos el <span className="font-semibold">Plan B: Automatización Completa</span> para maximizar el ahorro de horas hombre.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {/* Plan A */}
             <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-5">
-              <p className="text-xs font-semibold text-slate-400 mb-1">
-                📍 Plan A
-              </p>
-              <h4 className="text-base font-semibold mb-2">
-                Control y Visibilidad
-              </h4>
-              <p className="text-xs text-slate-300 mb-3">
-                Ideal si la prioridad inmediata es ver qué pasa en el negocio,
-                aunque la digitación de facturas siga siendo manual.
-              </p>
+              <p className="text-xs font-semibold text-slate-400 mb-1">📍 Plan A</p>
+              <h4 className="text-base font-semibold mb-2">Control y Visibilidad</h4>
+              <p className="text-xs text-slate-300 mb-3">Ideal si la prioridad inmediata es ver qué pasa en el negocio, aunque la digitación de facturas siga siendo manual.</p>
               <ul className="text-sm text-slate-200 space-y-1 mb-4">
                 <li>✅ Infraestructura: instalación de VPN segura.</li>
                 <li>✅ Ingeniería de datos: conexión y limpieza del ERP.</li>
                 <li>✅ Dashboards BI: ventas, costos y análisis de menú.</li>
                 <li>❌ No incluye módulo de escaneo de facturas (OCR).</li>
               </ul>
-              <p className="text-sm font-semibold">Inversión única: $1,500</p>
-              <p className="text-[11px] text-slate-400">
-                Tiempo de entrega estimado: 3 semanas.
-              </p>
+              <p className="text-sm font-semibold">Inversión única: <span className="line-through text-slate-400 mr-2">$1,500</span>$1,400</p>
+              <p className="text-[11px] text-slate-400">Tiempo de entrega estimado: 3 semanas.</p>
             </div>
-
             {/* Plan B (recomendado) */}
             <div className="rounded-2xl border border-quai-teal/60 bg-slate-950/90 p-5">
-              <p className="text-xs font-semibold text-quai-teal mb-1">
-                🚀 Plan B (Recomendado)
-              </p>
-              <h4 className="text-base font-semibold mb-2">
-                Automatización (BI + OCR)
-              </h4>
-              <p className="text-xs text-slate-300 mb-3">
-                La solución completa: elimina la ceguera operativa y también la
-                digitación manual.
-              </p>
+              <p className="text-xs font-semibold text-quai-teal mb-1">🚀 Plan B (Recomendado)</p>
+              <h4 className="text-base font-semibold mb-2">Automatización (BI + OCR)</h4>
+              <p className="text-xs text-slate-300 mb-3">La solución completa: elimina la ceguera operativa y también la digitación manual.</p>
               <ul className="text-sm text-slate-200 space-y-1 mb-4">
                 <li>✨ Todo lo incluido en el Plan A.</li>
                 <li>✅ App de OCR para lectura automática de facturas.</li>
-                <li>
-                  ✅ Automatización de inyección de datos (Proveedor, ITBMS,
-                  totales).
-                </li>
-                <li>✅ Capacitación al personal administrativo.</li>
-                <li>✅ Soporte de lanzamiento (1 mes de monitoreo intensivo).</li>
+                <li>✅ Automatización de inyección de datos (Proveedor, ITBMS, totales).</li>
+                <li>✅ Capacitación inicial al personal.</li>
+                <li>✅ Soporte de lanzamiento (1 mes de monitoreo).</li>
               </ul>
-              <p className="text-sm font-semibold">Inversión única: $2,500</p>
-              <p className="text-[11px] text-slate-400">
-                Tiempo de entrega estimado: 5–6 semanas. 🎯 Ahorro estimado:
-                60–80 horas/mes.
-              </p>
-            </div>
-
-            {/* Mantenimiento mensual */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-5">
-              <p className="text-xs font-semibold text-slate-400 mb-1">
-                🛠️ Mantenimiento mensual
-              </p>
-              <h4 className="text-base font-semibold mb-2">
-                Soporte y evolución continua
-              </h4>
-              <p className="text-xs text-slate-300 mb-3">
-                Asegura que todo siga funcionando 24/7 y que el sistema evolucione
-                con el negocio.
-              </p>
-              <ul className="text-sm text-slate-200 space-y-1 mb-4">
-                <li>☁️ Hosting y costos de infraestructura en la nube.</li>
-                <li>🔒 Monitoreo de la VPN y conectividad.</li>
-                <li>🐛 Soporte técnico y corrección de errores.</li>
-                <li>🔄 Actualizaciones menores de reportes y dashboards.</li>
-              </ul>
-              <p className="text-sm font-semibold">Fee mensual sugerido: $100</p>
-              <p className="text-[11px] text-slate-400">
-                Comienza una vez entregada la solución final.
-              </p>
+              <p className="text-sm font-semibold">Inversión única: <span className="line-through text-slate-400 mr-2">$2,500</span>$2,400</p>
+              <p className="text-[11px] text-slate-400">Tiempo de entrega estimado: 5–6 semanas. </p>
             </div>
           </div>
         </div>
+        {/* Opciones de monitoreo mensual */}
+        <div className="mt-8">
+          <h4 className="text-base font-semibold mb-4 text-quai-teal">Opciones de Monitoreo Mensual</h4>
+          <div className="grid gap-4 md:grid-cols-3">
+            {/* Sin Monitoreo */}
+            <div className="rounded-xl border border-yellow-400 bg-slate-950/80 p-5 flex flex-col justify-between">
+              <h5 className="text-sm font-bold mb-2 text-slate-100">Auto-gestión</h5>
+              <ul className="text-xs text-slate-200 mb-2 space-y-1">
+                <li>❌ No incluye revisión manual ni soporte por QuAI.</li>
+              </ul>
+              <div className="mt-2 text-quai-teal font-bold text-lg">$0<span className="text-xs">/mes</span></div>
+              <div className="mt-2 text-[11px] text-yellow-400">
+                ⚠️ Nota: Cualquier incidente, reconexión o falla futura ajena al proceso automatizado será atendida bajo cotización por hora técnica 
+                (Tarifa estándar: $50/hora).
+              </div>
+            </div>
+            {/* Monitoreo Basico */}
+                <div className="rounded-xl border border-slate-700 bg-slate-950/80 p-5 flex flex-col justify-between">
+                  <h5 className="text-sm font-bold text-slate-100">Monitoreo A <span className="text-xs bg-slate-100/20 text-slate-100 rounded px-2 ml-2">Básico</span></h5>
+                  <ul className="text-xs text-slate-200 mb-2 space-y-1">
+                    <li>🔔 Monitoreo de Hosting, VPN e infraestructura.</li>
+                    <li>🐛 Soporte técnico de errores.</li>
+                    <li>🔄 Monitoreo de reportes y dashboards.</li>
+                  </ul>
+                  <div className="mt-2 text-slate-100 font-bold text-lg">$50<span className="text-xs">/mes</span></div>
+                  <div className="mt-2 text-[11px] text-yellow-400">
+                ⚠️ Nota: Cualquier incidente, reconexión o mejora futura ajena al proceso automatizado será atendida bajo cotización por hora técnica 
+                (Tarifa estándar: $50/hora).
+                </div>
+                </div>
+            {/* Monitoreo Premium */}
+            <div className="rounded-xl border border-slate-700 bg-slate-950/80 p-5 flex flex-col justify-between">
+              <h5 className="text-sm font-bold text-slate-100">Monitoreo B <span className="text-xs bg-slate-100/20 text-slate-100 rounded px-2 ml-2">Avanzado</span></h5>
+              <ul className="text-xs text-slate-200 mb-2 space-y-1">
+                <li>🔔 Monitoreo de Hosting, VPN e infraestructura.</li>
+                <li>🛠️ Soporte técnico y mejoras incluidas*.</li>
+                <li>🔄 Monitoreo y actualizaciones de reportes y dashboards*.</li>
+              </ul>
+              <div className="mt-2 text-slate-100 font-bold text-lg"><span className="line-through text-slate-400 mr-2">$100</span>$90<span className="text-xs">/mes</span></div>
+              <div className="mt-2 text-[11px] text-slate-100">
+               *El monitoreo avanzado incluye 2 horas de soporte técnico o actualización al mes. Cualquier hora adicional se cotizará a $50/hora.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="my-2 border-slate-700" />
+        <div className="text-xs text-slate-400 mt-2">☁️  <span className="font-semibold">El costo de mantener el Hosting e Infraestructura corre por cuenta del cliente</span>.</div>
       </Section>
 
       {/* Próximos pasos */}
@@ -516,8 +489,22 @@ export default function App() {
           preparada exclusivamente para El Alandalus.
         </p>
       </Section>
-    </div>
+    {/* Footer */}
+    <footer className="mt-16">
+      <div className="bg-[#bdbdbd] py-12 px-8">
+        <h2 className="text-2xl font-semibold mb-6 text-black">Contacto y Ubicacion</h2>
+        <div className="text-black text-lg space-y-3">
+          <div>soporte@compuserviciospty.com</div>
+          <div>Cell y WhatsApp: (+507) 6679-1844</div>
+          <div>PH Venice Place – Torres de Milan<br/>Ancon , Panama. Via Centennial</div>
+          <div>Horarios de Lunes a Viernes POR CITA.<br/>(Sabado y Domingo sujeto a disponibilidad POR CITA)</div>
+        </div>
+      </div>
+      <div className="bg-black text-white text-xs py-4 px-8 flex items-center justify-between">
+        <span>© COMPUSERVICIOS PTY 2026 Sitio Construido por Ruben Alvarez.</span>
+      </div>
+    </footer>
+  </div>
   );
 }
-
 
